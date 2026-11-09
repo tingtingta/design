@@ -1,172 +1,146 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Photo Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="以細膩設計回應生活，打造舒適而有個性的居住空間。">
+  <title>test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="C:\Users\A51576\Desktop\Tingyu\design.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首頁">
+      <span class="brand-mark">DESIGN</span>
+    </a>
+    <button class="menu-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主要導覽">
+      <a href="#about">ABOUT</a>
+      <a href="#works">WORKS</a>
+      <a href="#services">SERVICES</a>
+      <a href="#contact" class="nav-contact">CONTACT ↗</a>
+    </nav>
+  </header>
 
-    <header class="header">
-        <h1>My Gallery</h1>
-        <p>Collection of beautiful moments</p>
-    </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">test</p>
+        <h1>標題一</h1>
+        <p class="hero-description">test</p>
+        <a class="text-link" href="#works">探索作品 <span>↘</span></a>
+      </div>
+      <div class="hero-image image-frame">
+        <!-- 將 images/hero.jpg 換成你的主視覺照片 -->
+        <img src="images/hero.jpg" alt="自然光灑落的現代住宅客廳"
+             onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+        <span class="image-note">01 / FEATURED SPACE</span>
+      </div>
+      <div class="hero-index">INTERIOR DESIGN STUDIO　—　TAIPEI</div>
+    </section>
 
-    <main class="container">
-        <div class="gallery" id="gallery"></div>
-    </main>
-
-    <!-- 圖片放大視窗 -->
-    <div class="lightbox" id="lightbox">
-
-        <button class="close-btn" id="closeBtn" aria-label="關閉">
-            &times;
-        </button>
-
-        <button class="nav-btn prev-btn" id="prevBtn"
-                aria-label="上一張">
-            &#10094;
-        </button>
-
-        <div class="lightbox-content">
-            <img id="lightboxImage" src="" alt="放大圖片">
-            <p id="imageCounter"></p>
+    <section class="intro section-wrap" id="about">
+      <div class="section-label"><span>01</span> ABOUT US</div>
+      <div class="intro-content">
+        <h2>關於</h2>
+        <div class="intro-text">
+          <p>從空間的比例、光線的流動，到材質與色彩的選擇，我們在意每一個細節如何回應居住者的生活。</p>
+          <p>以簡約而溫潤的設計語彙，創造耐看、舒適，也能長久陪伴的空間。</p>
+          <a class="text-link" href="#contact">認識我們 <span>↗</span></a>
         </div>
+      </div>
+    </section>
 
-        <button class="nav-btn next-btn" id="nextBtn"
-                aria-label="下一張">
-            &#10095;
-        </button>
+    <section class="works section-wrap" id="works">
+      <div class="section-heading">
+        <div>
+          <div class="section-label"><span>02</span> SELECTED WORKS</div>
+          <h2>精選作品</h2>
+        </div>
+        <p>每個空間，都有自己的故事。</p>
+      </div>
 
-    </div>
+      <div class="work-grid">
+        <article class="work-card work-large">
+          <div class="work-image image-frame">
+            <!-- 將 images/work-01.jpg 換成作品照片 -->
+            <img src="images/work-01.jpg" alt="暖色調住宅客廳作品"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+          </div>
+          <div class="work-meta"><div><h3>光的日常</h3><p>住宅空間｜台北</p></div><span>01 / 03</span></div>
+        </article>
+        <article class="work-card work-offset">
+          <div class="work-image image-frame">
+            <!-- 將 images/work-02.jpg 換成作品照片 -->
+            <img src="images/work-02.jpg" alt="木質調餐廚空間作品"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+          </div>
+          <div class="work-meta"><div><h3>木序之間</h3><p>住宅空間｜新北</p></div><span>02 / 03</span></div>
+        </article>
+        <article class="work-card">
+          <div class="work-image image-frame">
+            <!-- 將 images/work-03.jpg 換成作品照片 -->
+            <img src="images/work-03.jpg" alt="簡約舒適的臥室作品"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+          </div>
+          <div class="work-meta"><div><h3>靜謐之所</h3><p>住宅空間｜桃園</p></div><span>03 / 03</span></div>
+        </article>
+      </div>
+    </section>
 
-    <script>
-        // ==================================
-        // 圖片清單：在這裡新增你的圖片檔名
-        // ==================================
+    <section class="statement">
+      <div class="statement-image image-frame">
+        <!-- 將 images/detail.jpg 換成材質或空間細節照片 -->
+        <img src="images/detail.jpg" alt="天然材質與室內設計細節"
+             onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+      </div>
+      <div class="statement-copy">
+        <p class="eyebrow">DESIGN WITH INTENTION</p>
+        <h2>少一點形式，<br>多一點剛剛好。</h2>
+        <p>我們不追逐短暫的流行，而是從人的需求出發，讓美感與機能自然共存。</p>
+      </div>
+    </section>
 
-        const images = [
-            "images/06.jpg",
-            "images/07.jpg",
-            "images/08.jpg",
-            "images/10.jpg",
-            "images/blingbling.png",
-            "images/what.png"
-        ];
+    <section class="services section-wrap" id="services">
+      <div class="section-label"><span>03</span> WHAT WE DO</div>
+      <div class="services-layout">
+        <h2>從想像開始，<br>一起完成理想生活。</h2>
+        <div class="service-list">
+          <div class="service-item"><span>01</span><div><h3>住宅空間設計</h3><p>格局規劃、動線配置與整體空間設計。</p></div><b>↗</b></div>
+          <div class="service-item"><span>02</span><div><h3>商業空間設計</h3><p>打造符合品牌個性的店面與工作場域。</p></div><b>↗</b></div>
+          <div class="service-item"><span>03</span><div><h3>室內裝修工程</h3><p>從設計到施工，整合每個執行細節。</p></div><b>↗</b></div>
+          <div class="service-item"><span>04</span><div><h3>軟裝與家具配置</h3><p>透過燈光、家具與材質，完善空間表情。</p></div><b>↗</b></div>
+        </div>
+      </div>
+    </section>
 
-        const gallery = document.getElementById("gallery");
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImage = document.getElementById("lightboxImage");
-        const imageCounter = document.getElementById("imageCounter");
+    <section class="contact" id="contact">
+      <p class="eyebrow">LET'S CREATE SOMETHING MEANINGFUL</p>
+      <h2>準備好開始規劃<br>你的理想空間了嗎？</h2>
+      <p>告訴我們你的想法，讓我們一起把它實現。</p>
+      <a class="contact-button" href="mailto:hello@example.com">與我們聯繫 <span>↗</span></a>
+    </section>
+  </main>
 
-        let currentIndex = 0;
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">123</span><span class="brand-name">STUDIO<small>DESIGN</small></span></a>
+    <div class="footer-info"><span>TAIPEI, TAIWAN</span><span>hello@example.com</span><span>© 2026</span></div>
+  </footer>
 
-        // 建立圖片牆
-        images.forEach((filename, index) => {
-
-            const item = document.createElement("div");
-            item.className = "gallery-item";
-
-            const img = document.createElement("img");
-            img.src = filename;
-            img.alt = "Gallery image " + (index + 1);
-            img.loading = "lazy";
-
-            img.addEventListener("click", () => {
-                openLightbox(index);
-            });
-
-            item.appendChild(img);
-            gallery.appendChild(item);
-
-        });
-
-        // 開啟圖片
-        function openLightbox(index) {
-
-            currentIndex = index;
-
-            lightboxImage.src = images[currentIndex];
-
-            imageCounter.textContent =
-                `${currentIndex + 1} / ${images.length}`;
-
-            lightbox.classList.add("active");
-            document.body.style.overflow = "hidden";
-
-        }
-
-        // 關閉圖片
-        function closeLightbox() {
-
-            lightbox.classList.remove("active");
-            document.body.style.overflow = "";
-
-        }
-
-        // 切換上一張
-        function showPrev() {
-
-            currentIndex =
-                (currentIndex - 1 + images.length) % images.length;
-
-            updateLightbox();
-
-        }
-
-        // 切換下一張
-        function showNext() {
-
-            currentIndex =
-                (currentIndex + 1) % images.length;
-
-            updateLightbox();
-
-        }
-
-        // 更新圖片
-        function updateLightbox() {
-
-            lightboxImage.src = images[currentIndex];
-
-            imageCounter.textContent =
-                `${currentIndex + 1} / ${images.length}`;
-
-        }
-
-        // 按鈕事件
-        document.getElementById("closeBtn")
-            .addEventListener("click", closeLightbox);
-
-        document.getElementById("prevBtn")
-            .addEventListener("click", showPrev);
-
-        document.getElementById("nextBtn")
-            .addEventListener("click", showNext);
-
-        // 點擊背景關閉
-        lightbox.addEventListener("click", (event) => {
-
-            if (event.target === lightbox) {
-                closeLightbox();
-            }
-
-        });
-
-        // 鍵盤操作
-        document.addEventListener("keydown", (event) => {
-
-            if (!lightbox.classList.contains("active")) return;
-
-            if (event.key === "Escape") closeLightbox();
-            if (event.key === "ArrowLeft") showPrev();
-            if (event.key === "ArrowRight") showNext();
-
-        });
-
-    </script>
-
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open');
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
 </body>
 </html>
