@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <header class="header">
+        <h1>My Gallery</h1>
+        <p>Collection of beautiful moments</p>
+    </header>
+
+    <main class="container">
+        <div class="gallery" id="gallery"></div>
+    </main>
+
+    <!-- 圖片放大視窗 -->
+    <div class="lightbox" id="lightbox">
+
+        <button class="close-btn" id="closeBtn" aria-label="關閉">
+            &times;
+        </button>
+
+        <button class="nav-btn prev-btn" id="prevBtn"
+                aria-label="上一張">
+            &#10094;
+        </button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="放大圖片">
+            <p id="imageCounter"></p>
+        </div>
+
+        <button class="nav-btn next-btn" id="nextBtn"
+                aria-label="下一張">
+            &#10095;
+        </button>
+
+    </div>
+
+    <script>
+        // ==================================
+        // 圖片清單：在這裡新增你的圖片檔名
+        // ==================================
+
+        const images = [
+            "06.jpg",
+            "07.jpg",
+            "08.jpg",
+            "10.jpg",
+            "blingbling.png",
+            "what.png"
+        ];
+
+        const gallery = document.getElementById("gallery");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+        const imageCounter = document.getElementById("imageCounter");
+
+        let currentIndex = 0;
+
+        // 建立圖片牆
+        images.forEach((filename, index) => {
+
+            const item = document.createElement("div");
+            item.className = "gallery-item";
+
+            const img = document.createElement("img");
+            img.src = filename;
+            img.alt = "Gallery image " + (index + 1);
+            img.loading = "lazy";
+
+            img.addEventListener("click", () => {
+                openLightbox(index);
+            });
+
+            item.appendChild(img);
+            gallery.appendChild(item);
+
+        });
+
+        // 開啟圖片
+        function openLightbox(index) {
+
+            currentIndex = index;
+
+            lightboxImage.src = images[currentIndex];
+
+            imageCounter.textContent =
+                `${currentIndex + 1} / ${images.length}`;
+
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+
+        }
+
+        // 關閉圖片
+        function closeLightbox() {
+
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "";
+
+        }
+
+        // 切換上一張
+        function showPrev() {
+
+            currentIndex =
+                (currentIndex - 1 + images.length) % images.length;
+
+            updateLightbox();
+
+        }
+
+        // 切換下一張
+        function showNext() {
+
+            currentIndex =
+                (currentIndex + 1) % images.length;
+
+            updateLightbox();
+
+        }
+
+        // 更新圖片
+        function updateLightbox() {
+
+            lightboxImage.src = images[currentIndex];
+
+            imageCounter.textContent =
+                `${currentIndex + 1} / ${images.length}`;
+
+        }
+
+        // 按鈕事件
+        document.getElementById("closeBtn")
+            .addEventListener("click", closeLightbox);
+
+        document.getElementById("prevBtn")
+            .addEventListener("click", showPrev);
+
+        document.getElementById("nextBtn")
+            .addEventListener("click", showNext);
+
+        // 點擊背景關閉
+        lightbox.addEventListener("click", (event) => {
+
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+
+        });
+
+        // 鍵盤操作
+        document.addEventListener("keydown", (event) => {
+
+            if (!lightbox.classList.contains("active")) return;
+
+            if (event.key === "Escape") closeLightbox();
+            if (event.key === "ArrowLeft") showPrev();
+            if (event.key === "ArrowRight") showNext();
+
+        });
+
+    </script>
+
+</body>
+</html>
