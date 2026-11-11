@@ -78,18 +78,19 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 .section-wrap { padding-left: 12%; padding-right: 12%; }
+.section-wrap h2 { margin-top: 0px; }
 .intro { padding-top: 125px; padding-bottom: 135px; }
 .section-label { font-size: 14px; letter-spacing: 2px; color: var(--muted); }
 .section-label span { color: var(--ink); margin-right: 15px; }
 .intro-content { display: grid; grid-template-columns: 1fr .8fr; gap: 12%; margin-top: 48px; align-items: start; }
 h2 { font-weight: 500; letter-spacing: .04em; }
-.intro h2, .services h2 { font-size: clamp(28px, 3vw, 42px); line-height: 1.65; margin: 0; }
+.intro h2, .services h2 { font-size: 34px; line-height: 1.65; margin: 0; }
 .intro-text { padding-top: 7px; }
 .intro-text p { font-size: 18px; line-height: 2.2; color: var(--muted); margin: 0 0 17px; }
 
 .works { padding-top: 92px; padding-bottom: 130px; background: #efeee8; }
-.section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 48px; }
-.section-heading h2 { font-size: 34px; margin: 19px 0 0; }
+.section-heading { display: flex; justify-content: space-between; align-items: end;}
+.section-heading h2 { font-size: 34px; margin-top: 48px; }
 .section-heading > p { color: var(--muted); font-size: 11px; }
 .work-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 8%; row-gap: 62px; align-items: start; padding-bottom: 30px;}
 .work-large { grid-row: span 2; }
@@ -262,8 +263,8 @@ h2 { font-weight: 500; letter-spacing: .04em; }
   .intro-content, .services-layout { grid-template-columns: 1fr; gap: 28px; margin-top: 32px; }
   .intro h2, .services h2 { font-size: 32px; }
   .works { padding-top: 75px; padding-bottom: 85px; }
-  .section-heading { align-items: start; flex-direction: column; gap: 10px; margin-bottom: 30px; }
-  .section-heading h2 { font-size: 29px; }
+  .section-heading { align-items: start; flex-direction: column; gap: 10px;}
+  .section-heading h2 { font-size: 29px; margin-top: 32px;}
 
   .statement { grid-template-columns: 1fr; }
   .statement-image { min-height: 330px; height: 330px; }
@@ -272,6 +273,7 @@ h2 { font-weight: 500; letter-spacing: .04em; }
   .contact { padding: 80px 7%; }
   .site-footer { padding: 28px 6%; align-items: flex-start; gap: 22px; flex-direction: column; }
   .footer-info { flex-wrap: wrap; gap: 12px 20px; }
+  .contact h2 { margin: 32px 0;}
 }
 @media (max-width: 420px) {
   .hero-image { height: 300px; }
