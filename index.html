@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <title>究境室內裝修工程</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,18 +26,15 @@
     <main id="top">
         <section class="hero">
             <div class="hero-copy">
-                <!-- <p class="eyebrow">test</p> -->
-                <h1>究境室內裝修設計與工程</h1>
-                <!-- <p class="hero-description">test</p> -->
+                <img style="padding: 50px 0;" src="C:\Users\A51576\Desktop\Tingyu\design\Logo2.png">
                 <a class="text-link" href="#works">探索作品 <span>↘</span></a>
             </div>
             <div class="hero-image image-frame">
-                <!-- 將 images/hero.jpg 換成你的主視覺照片 -->
                 <img src="images/what.png" alt="自然光灑落的現代住宅客廳"
                     onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
                 <span class="image-note">01 / FEATURED SPACE</span>
             </div>
-            <div class="hero-index">INTERIOR DESIGN STUDIO　—　TAIPEI</div>
+            <div class="hero-index">INTERIOR DESIGN STUDIO — TAIPEI</div>
         </section>
 
         <section class="intro section-wrap" id="about">
@@ -53,248 +48,78 @@
             </div>
         </section>
 
+        <!-- 近期作品：改為每案一張封面，點擊開啟燈箱看全部 4 張 -->
         <section class="works section-wrap" id="works">
             <div class="section-heading">
                 <div>
                     <div class="section-label"><span>02</span> SELECTED WORKS</div>
                     <h2>近期作品</h2>
                 </div>
-                <!-- <p>123123</p> -->
             </div>
 
-            <div>
-                <h2>中古屋全室翻修</h2>
-                <h4 style="color: gray;">格局調整｜水電更新｜開放式廚房｜新增收納</h4>
-                <div class="work-grid">
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-01.jpg 換成作品照片 -->
-                            <img src="images/A_01.webp" alt="暖色調住宅客廳作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+            <!-- 4 個作品封面直接並排顯示，不需隱藏 -->
+            <div class="work-grid">
+                <article class="work-card" data-project="projectA" role="button" tabindex="0">
+                    <div class="work-image image-frame">
+                        <img src="images/A_01.webp" alt="中古屋全室翻修" onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+                        <span class="view-badge">VIEW GALLERY (4) ↗</span>
+                    </div>
+                    <div class="work-meta">
+                        <div>
+                            <h3>中古屋全室翻修</h3>
+                            <p>住宅空間（43坪）｜台北中山區</p>
                         </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（43坪）｜台北中山區</p>
-                            </div>
-                            <span>01 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-02.jpg 換成作品照片 -->
-                            <img src="images/A_02.webp" alt="木質調餐廚空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（43坪）｜台北中山區</p>
-                            </div>
-                            <span>02 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-03.jpg 換成作品照片 -->
-                            <img src="images/A_03.webp" alt="簡約舒適的臥室作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（43坪）｜台北中山區</p>
-                            </div>
-                            <span>03 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <img src="images/A_04.webp" alt="現代住宅空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（43坪）｜台北中山區</p>
-                            </div>
-                            <span>04 / 04</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
+                        <span>01</span>
+                    </div>
+                </article>
 
-            <div class="is-hidden">
-                <h2>健康樂齡宅</h2>
-                <h4 style="color: gray;">架高木地板｜日式小宅｜空間活化</h4>
-                <div class="work-grid">
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-01.jpg 換成作品照片 -->
-                            <img src="images/B_01.webp" alt="暖色調住宅客廳作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+                <article class="work-card" data-project="projectB" role="button" tabindex="0">
+                    <div class="work-image image-frame">
+                        <img src="images/B_01.webp" alt="健康樂齡宅" onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+                        <span class="view-badge">VIEW GALLERY (4) ↗</span>
+                    </div>
+                    <div class="work-meta">
+                        <div>
+                            <h3>健康樂齡宅</h3>
+                            <p>住宅空間（24坪）｜新北中和</p>
                         </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（24坪）｜新北中和</p>
-                            </div><span>01 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-02.jpg 換成作品照片 -->
-                            <img src="images/B_02.webp" alt="木質調餐廚空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（43坪）｜新北中和</p>
-                            </div><span>02 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-03.jpg 換成作品照片 -->
-                            <img src="images/B_03.webp" alt="簡約舒適的臥室作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（43坪）｜新北中和</p>
-                            </div><span>03 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <img src="images/B_04.webp" alt="現代住宅空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間（43坪）｜新北中和</p>
-                            </div>
-                            <span>04 / 04</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
+                        <span>02</span>
+                    </div>
+                </article>
 
-            <div class="is-hidden">
-                <h2>小家庭新屋改造</h2>
-                <h4 style="color: gray;">格局調整｜材質拼接｜定製傢俱</h4>
-                <div class="work-grid">
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-01.jpg 換成作品照片 -->
-                            <img src="images/C_01.webp" alt="暖色調住宅客廳作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+                <article class="work-card" data-project="projectC" role="button" tabindex="0">
+                    <div class="work-image image-frame">
+                        <img src="images/C_01.webp" alt="小家庭新屋改造" onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+                        <span class="view-badge">VIEW GALLERY (4) ↗</span>
+                    </div>
+                    <div class="work-meta">
+                        <div>
+                            <h3>小家庭新屋改造</h3>
+                            <p>住宅空間｜台北北投</p>
                         </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜台北北投</p>
-                            </div><span>01 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-02.jpg 換成作品照片 -->
-                            <img src="images/C_02.webp" alt="木質調餐廚空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜台北北投</p>
-                            </div><span>02 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-03.jpg 換成作品照片 -->
-                            <img src="images/C_03.webp" alt="簡約舒適的臥室作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜台北北投</p>
-                            </div><span>03 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <img src="images/C_04.webp" alt="現代住宅空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜台北北投</p>
-                            </div>
-                            <span>04 / 04</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
+                        <span>03</span>
+                    </div>
+                </article>
 
-            <div class="is-hidden">
-                <h2>小資新屋裝修</h2>
-                <h4 style="color: gray;">天地壁基礎施工｜客餐廳及廚房系統櫃｜智慧燈具整合</h4>
-                <div class="work-grid">
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-01.jpg 換成作品照片 -->
-                            <img src="images/D_01.webp" alt="暖色調住宅客廳作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+                <article class="work-card" data-project="projectD" role="button" tabindex="0">
+                    <div class="work-image image-frame">
+                        <img src="images/D_01.webp" alt="小資新屋裝修" onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
+                        <span class="view-badge">VIEW GALLERY (4) ↗</span>
+                    </div>
+                    <div class="work-meta">
+                        <div>
+                            <h3>小資新屋裝修</h3>
+                            <p>住宅空間｜桃園青埔</p>
                         </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜桃園青埔</p>
-                            </div><span>01 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-02.jpg 換成作品照片 -->
-                            <img src="images/D_02.webp" alt="木質調餐廚空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜桃園青埔</p>
-                            </div><span>02 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <!-- 將 images/work-03.jpg 換成作品照片 -->
-                            <img src="images/D_03.webp" alt="簡約舒適的臥室作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜桃園青埔</p>
-                            </div><span>03 / 04</span>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image image-frame">
-                            <img src="images/D_04.webp" alt="現代住宅空間作品"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
-                        </div>
-                        <div class="work-meta">
-                            <div>
-                                <p>住宅空間｜桃園青埔</p>
-                            </div>
-                            <span>04 / 04</span>
-                        </div>
-                    </article>
-                </div>
+                        <span>04</span>
+                    </div>
+                </article>
             </div>
-
-            <div class="works-more">
-                <button id="loadMoreBtn" class="load-more-btn">
-                    查看更多作品 <span>＋</span>
-                </button>
-            </div>
+            <!-- 已拿掉 .works-more 與 loadMoreBtn -->
         </section>
 
         <section class="statement">
             <div class="statement-image image-frame">
-                <!-- 將 images/detail.jpg 換成材質或空間細節照片 -->
                 <img src="images/detail.jpg" alt="天然材質與室內設計細節"
                     onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');">
             </div>
@@ -342,39 +167,18 @@
 
         <section class="contact" id="contact">
             <div class="section-label"><span>04</span> CONTACT US</div>
-            <!-- <p class="eyebrow">OUR PROCESS</p> -->
             <h2>服務流程</h2>
 
             <div class="contact-list">
-                <div class="contact-item">
-                    <div>
-                        <h3>初步接洽（電話／LINE）</h3>
-                    </div>
-                </div>
+                <div class="contact-item"><div><h3>初步接洽（電話／LINE）</h3></div></div>
                 <span>↓</span>
-                <div class="contact-item">
-                    <div>
-                        <h3>現場丈量與需求討論</h3>
-                    </div>
-                </div>
+                <div class="contact-item"><div><h3>現場丈量與需求討論</h3></div></div>
                 <span>↓</span>
-                <div class="contact-item">
-                    <div>
-                        <h3>預估報價與初步圖面提案</h3>
-                    </div>
-                </div>
+                <div class="contact-item"><div><h3>預估報價與初步圖面提案</h3></div></div>
                 <span>↓</span>
-                <div class="contact-item">
-                    <div>
-                        <h3>設計簽約與工程估價</h3>
-                    </div>
-                </div>
+                <div class="contact-item"><div><h3>設計簽約與工程估價</h3></div></div>
                 <span>↓</span>
-                <div class="contact-item">
-                    <div>
-                        <h3>施工執行與完工交付</h3>
-                    </div>
-                </div>
+                <div class="contact-item"><div><h3>施工執行與完工交付</h3></div></div>
             </div>
 
             <a class="contact-button" href="mailto:hello@example.com">
@@ -389,7 +193,31 @@
         <div class="footer-info"><span>TAIPEI, TAIWAN</span><span>hello@example.com</span><span>© 2026</span></div>
     </footer>
 
+    <!-- 作品集燈箱彈窗 (Lightbox 內含專案切換) -->
+    <div id="galleryModal" class="gallery-modal" aria-hidden="true">
+        <div class="gallery-backdrop" data-close></div>
+        <div class="gallery-dialog" role="dialog" aria-modal="true">
+            <div class="gallery-header">
+                <div>
+                    <!-- 燈箱內的案件切換按鈕列 -->
+                    <div id="galleryTabs" class="gallery-tabs">
+                        <button type="button" class="tab-btn" data-target="projectA">中古屋全室翻修</button>
+                        <button type="button" class="tab-btn" data-target="projectB">健康樂齡宅</button>
+                        <button type="button" class="tab-btn" data-target="projectC">小家庭新屋改造</button>
+                        <button type="button" class="tab-btn" data-target="projectD">小資新屋裝修</button>
+                    </div>
+                    <p id="gallerySubtitle" class="gallery-sub-text"></p>
+                </div>
+                <button class="gallery-close" type="button" aria-label="關閉預覽" data-close>✕</button>
+            </div>
+
+            <!-- 垂直展開目前選中案件的所有圖片 -->
+            <div id="galleryList" class="gallery-list"></div>
+        </div>
+    </div>
+
     <script>
+        // 漢堡選單
         const toggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('.main-nav');
         toggle.addEventListener('click', () => {
@@ -402,46 +230,106 @@
             toggle.setAttribute('aria-expanded', 'false');
         }));
 
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
-        // const batchSize = 3;
+        // 作品圖片資料庫
+        const projectsData = {
+            projectA: {
+                title: '中古屋全室翻修',
+                subtitle: '格局調整｜水電更新｜開放式廚房｜新增收納',
+                images: ['images/A_01.webp', 'images/A_02.webp', 'images/A_03.webp', 'images/A_04.webp']
+            },
+            projectB: {
+                title: '健康樂齡宅',
+                subtitle: '架高木地板｜日式小宅｜空間活化',
+                images: ['images/B_01.webp', 'images/B_02.webp', 'images/B_03.webp', 'images/B_04.webp']
+            },
+            projectC: {
+                title: '小家庭新屋改造',
+                subtitle: '格局調整｜材質拼接｜定製傢俱',
+                images: ['images/C_01.webp', 'images/C_02.webp', 'images/C_03.webp', 'images/C_04.webp']
+            },
+            projectD: {
+                title: '小資新屋裝修',
+                subtitle: '天地壁基礎施工｜客餐廳及廚房系統櫃｜智慧燈具整合',
+                images: ['images/D_01.webp', 'images/D_02.webp', 'images/D_03.webp', 'images/D_04.webp']
+            }
+        };
 
-        loadMoreBtn.addEventListener('click', function () {
+        const modal = document.getElementById('galleryModal');
+        const gallerySubtitle = document.getElementById('gallerySubtitle');
+        const galleryList = document.getElementById('galleryList');
+        const tabBtns = document.querySelectorAll('.tab-btn');
 
-            // 找出目前隱藏的作品
-            const hiddenWorks = document.querySelectorAll(
-                '#works .is-hidden'
-            );
+        function loadProjectIntoModal(projectId) {
+            const project = projectsData[projectId];
+            if (!project) return;
 
-            // 每次顯示 3 個作品
-            hiddenWorks.forEach((work, index) => {
-                work.classList.remove('is-hidden');
+            // 更新副標題
+            gallerySubtitle.textContent = project.subtitle;
+
+            // 高亮對應的 Tab 按鈕
+            tabBtns.forEach(btn => {
+                btn.classList.toggle('is-active', btn.dataset.target === projectId);
             });
 
-            // 如果沒有剩餘隱藏作品，就隱藏按鈕
-            const remainingWorks = document.querySelectorAll(
-                '#works .is-hidden'
-            );
+            // 渲染該案件的所有圖片
+            const total = String(project.images.length).padStart(2, '0');
+            galleryList.innerHTML = project.images.map((src, idx) => `
+                <figure class="gallery-item">
+                    <img src="${src}" loading="lazy">
+                    <figcaption>${String(idx + 1).padStart(2, '0')} / ${total}</figcaption>
+                </figure>
+            `).join('');
 
-            if (remainingWorks.length === 0) {
-                loadMoreBtn.style.display = 'none';
+            galleryList.scrollTop = 0;
+        }
+
+        function openGallery(projectId) {
+            loadProjectIntoModal(projectId);
+            modal.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        // 首頁卡片點擊綁定
+        document.querySelectorAll('.work-card[data-project]').forEach(card => {
+            card.addEventListener('click', () => openGallery(card.dataset.project));
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openGallery(card.dataset.project);
+                }
+            });
+        });
+
+        // 燈箱內的 Tab 切換綁定
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                loadProjectIntoModal(btn.dataset.target);
+            });
+        });
+
+        modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeGallery));
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                closeGallery();
             }
-
         });
 
         // 重新載入頁面時，固定回到最上方
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
-
         window.addEventListener('pageshow', function () {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'instant'
-            });
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         });
     </script>
-
 </body>
 
 </html>
