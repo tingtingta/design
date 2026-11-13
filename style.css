@@ -322,12 +322,16 @@ h2 { font-weight: 500; letter-spacing: .04em; }
   z-index: 1;
   width: 100%;
   max-width: 1040px;
+  max-height: 90%;
   background: var(--paper);
   padding: 28px 32px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
 }
 .gallery-header {
   display: flex;
