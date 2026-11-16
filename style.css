@@ -601,43 +601,51 @@ h2 {
   padding-top: 3px;
 }
 
-/* === 燈箱彈窗 (Lightbox) 樣式 === */
+/* === 燈箱開啟的圓滑過渡動畫 === */
 .gallery-modal {
   position: fixed;
   inset: 0;
   z-index: 2000;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .gallery-modal.is-open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
+/* 背景遮罩漸漸浮現 */
 .gallery-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(24, 25, 22, 0.88);
+  background: rgba(24, 25, 22, 0.85);
   backdrop-filter: blur(4px);
 }
 
+/* 內容視窗從微小放大並浮現，呈現柔順質感 */
 .gallery-dialog {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1040px;
-  max-height: 90%;
+  max-width: 960px;
+  max-height: 90vh;
   background: var(--paper);
-  padding: 10px 10px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
+  transform: scale(0.96);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-modal.is-open .gallery-dialog {
+  transform: scale(1);
 }
 
 .gallery-header {
