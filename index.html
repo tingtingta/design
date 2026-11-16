@@ -216,7 +216,6 @@
     </div>
 
     <script>
-        // 漢堡選單
         const toggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('.main-nav');
         toggle.addEventListener('click', () => {
@@ -328,12 +327,21 @@
         window.addEventListener('pageshow', function () {
             window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         });
-        
+
         window.addEventListener('load', function () {
             window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
             setTimeout(function() {
                 window.scrollTo(0, 0);
             }, 50);
+        });
+
+        window.addEventListener('load', function () {
+            Object.values(projectsData).forEach(project => {
+                project.images.forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+            });
         });
     </script>
 </body>
